@@ -19,8 +19,8 @@
 */
 
 const vqv = (param1, param2) => {
-  let name = param1;
-  let age = param2;
+  const name = param1;
+  const age = param2;
 
   if (name === undefined || age === undefined) {
     return undefined;
