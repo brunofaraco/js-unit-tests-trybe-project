@@ -34,10 +34,17 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
+    expect(typeof productDetails).toEqual('function');
     // Teste se o retorno da função é um array.
+    expect(productDetails('abacate', 'laranja')).toBeInstanceOf(Array);
     // Teste se o array retornado pela função contém dois itens dentro.
+    expect(Object.keys(productDetails('Copo', 'Saco de lixo')).length).toEqual(2);
     // Teste se os dois itens dentro do array retornado pela função são objetos.
+    expect(typeof Object.keys(productDetails('Vodka', 'Energético')[0])).toEqual('object');
+    expect(typeof Object.keys(productDetails('Vodka', 'Energético')[1])).toEqual('object'); 
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
+    // expect(productDetails('Prato', 'Prato')[0] !== productDetails('Prato', 'Prato')[1]).toBeTruthy();
     // Teste se os dois productIds terminam com 123.
+    expect(productDetails('Webcam', 'Microfone')[0].details.productId.endsWith('123')).toBeTruthy();
   });
 });
