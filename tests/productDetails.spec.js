@@ -31,7 +31,7 @@ const productDetails = require('../src/productDetails');
 
 describe('6 - Implemente os casos de teste para a função `productDetails`', () => {
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
-    fail('Teste vazio!');
+    // fail('Teste vazio!');
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
     expect(typeof productDetails).toEqual('function');
@@ -43,8 +43,9 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(typeof Object.keys(productDetails('Vodka', 'Energético')[0])).toEqual('object');
     expect(typeof Object.keys(productDetails('Vodka', 'Energético')[1])).toEqual('object'); 
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
-    // expect(productDetails('Prato', 'Prato')[0] !== productDetails('Prato', 'Prato')[1]).toBeTruthy();
+    expect(productDetails('Prato', 'Garfo')[0]).not.toEqual(productDetails('Prato', 'Garfo')[1]);
     // Teste se os dois productIds terminam com 123.
     expect(productDetails('Webcam', 'Microfone')[0].details.productId.endsWith('123')).toBeTruthy();
+    expect(productDetails('Webcam', 'Microfone')[1].details.productId.endsWith('123')).toBeTruthy();
   });
 });
