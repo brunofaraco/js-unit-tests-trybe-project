@@ -37,6 +37,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(typeof productDetails).toEqual('function');
     // Teste se o retorno da função é um array.
     expect(productDetails('abacate', 'laranja')).toBeInstanceOf(Array);
+    expect(Array.isArray(productDetails('abacate', 'laranja'))).toBeTruthy();
     // Teste se o array retornado pela função contém dois itens dentro.
     expect(Object.keys(productDetails('Copo', 'Saco de lixo')).length).toEqual(2);
     // Teste se os dois itens dentro do array retornado pela função são objetos.
