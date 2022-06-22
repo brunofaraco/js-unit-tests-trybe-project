@@ -30,7 +30,6 @@ const productDetails = require('../src/productDetails');
 */
 
 describe('6 - Implemente os casos de teste para a função `productDetails`', () => {
-  describe('Verifica se a função `productDetails` tem o comportamento esperado', () => {
      
     it('Teste se productDetails é uma função.', () => {expect(typeof productDetails).toEqual('function');});
     
@@ -50,4 +49,3 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(productDetails('Webcam', 'Microfone')[0].details.productId.endsWith('123')).toBeTruthy();
     expect(productDetails('Webcam', 'Microfone')[1].details.productId.endsWith('123')).toBeTruthy();});
   });
-});

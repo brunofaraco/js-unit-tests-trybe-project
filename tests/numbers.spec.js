@@ -15,7 +15,6 @@ const numbers = require('../src/numbers');
 */
 
 describe('2 - Implemente os casos de teste para a função `numbers`', () => {
-  describe('Verifica se a função `numbers` retorna `true` quando o array contém apenas números e falso caso contrário', () => {
 
     it('Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true', () => {expect(numbers([1, 2, 3, 4, 5])).toBeTruthy();});
 
@@ -25,4 +24,3 @@ describe('2 - Implemente os casos de teste para a função `numbers`', () => {
 
     it('Escreva um teste em que a função recebe [" "] e retorna false', () => {expect(numbers([' '])).toBeFalsy();});  
   });
-});
